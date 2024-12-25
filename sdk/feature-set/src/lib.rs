@@ -618,7 +618,7 @@ pub mod apply_cost_tracker_during_replay {
     solana_pubkey::declare_id!("2ry7ygxiYURULZCrypHhveanvP5tzZ4toRwVp89oCNSj");
 }
 pub mod bpf_account_data_direct_mapping {
-    solana_pubkey::declare_id!("EenyoWx9UMXYKpR8mW5Jmfmy2fRjzUtM7NduYMY8bx33");
+    solana_pubkey::declare_id!("GJVDwRkUPNdk9QaK4VsU4g1N41QNxhy1hevjf8kz45Mq");
 }
 
 pub mod add_set_tx_loaded_accounts_data_size_instruction {
@@ -818,7 +818,7 @@ pub mod migrate_config_program_to_core_bpf {
 }
 
 pub mod enable_get_epoch_stake_syscall {
-    solana_pubkey::declare_id!("7mScTYkJXsbdrcwTQRs7oeCSXoJm4WjzBsRyf8bCU3Np");
+    solana_pubkey::declare_id!("FKe75t4LXxGaQnVHdUKM6DSFifVVraGZ8LyNo7oPwy1Z");
 }
 
 pub mod migrate_address_lookup_table_program_to_core_bpf {
