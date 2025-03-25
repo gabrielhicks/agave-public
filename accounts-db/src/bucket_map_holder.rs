@@ -8,15 +8,8 @@ use {
         waitable_condvar::WaitableCondvar,
     },
     solana_bucket_map::bucket_map::{BucketMap, BucketMapConfig},
-<<<<<<< HEAD
-=======
-    solana_clock::Slot,
->>>>>>> f9352da4c (Sets accounts index's AGE_MS to 2 seconds (#5448))
     solana_measure::measure::Measure,
-    solana_sdk::{
-        clock::{Slot, DEFAULT_MS_PER_SLOT},
-        timing::AtomicInterval,
-    },
+    solana_sdk::{clock::Slot, timing::AtomicInterval},
     std::{
         fmt::Debug,
         marker::PhantomData,
