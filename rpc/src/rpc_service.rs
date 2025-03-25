@@ -347,8 +347,6 @@ async fn handle_rest(bank_forks: &Arc<RwLock<BankForks>>, path: &str) -> Option<
     }
 }
 
-<<<<<<< HEAD
-=======
 fn process_rest(bank_forks: &Arc<RwLock<BankForks>>, path: &str) -> RequestMiddlewareAction {
     let bank_forks = bank_forks.clone();
     let path = path.to_string();
@@ -368,46 +366,6 @@ fn process_rest(bank_forks: &Arc<RwLock<BankForks>>, path: &str) -> RequestMiddl
     }
 }
 
-/// [`JsonRpcServiceConfig`] is a helper structure that simplifies the creation
-/// of a [`JsonRpcService`] with a target TPU client specified by
-/// `client_option`.
-pub struct JsonRpcServiceConfig<'a> {
-    pub rpc_addr: SocketAddr,
-    pub rpc_config: JsonRpcConfig,
-    pub snapshot_config: Option<SnapshotConfig>,
-    pub bank_forks: Arc<RwLock<BankForks>>,
-    pub block_commitment_cache: Arc<RwLock<BlockCommitmentCache>>,
-    pub blockstore: Arc<Blockstore>,
-    pub cluster_info: Arc<ClusterInfo>,
-    pub poh_recorder: Option<Arc<RwLock<PohRecorder>>>,
-    pub genesis_hash: Hash,
-    pub ledger_path: PathBuf,
-    pub validator_exit: Arc<RwLock<Exit>>,
-    pub exit: Arc<AtomicBool>,
-    pub override_health_check: Arc<AtomicBool>,
-    pub startup_verification_complete: Arc<AtomicBool>,
-    pub optimistically_confirmed_bank: Arc<RwLock<OptimisticallyConfirmedBank>>,
-    pub send_transaction_service_config: send_transaction_service::Config,
-    pub max_slots: Arc<MaxSlots>,
-    pub leader_schedule_cache: Arc<LeaderScheduleCache>,
-    pub max_complete_transaction_status_slot: Arc<AtomicU64>,
-    pub max_complete_rewards_slot: Arc<AtomicU64>,
-    pub prioritization_fee_cache: Arc<PrioritizationFeeCache>,
-    pub client_option: ClientOption<'a>,
-}
-
-/// [`ClientOption`] enum represents the available client types for TPU
-/// communication:
-/// * [`ConnectionCacheClient`]: Uses a shared [`ConnectionCache`] to manage
-///       connections efficiently.
-/// * [`TpuClientNextClient`]: Relies on the `tpu-client-next` crate and
-///       requires a reference to a [`Keypair`].
-pub enum ClientOption<'a> {
-    ConnectionCache(Arc<ConnectionCache>),
-    TpuClientNext(&'a Keypair),
-}
-
->>>>>>> a9fa6fbe1 (refactor get supply rpc method (#5473))
 impl JsonRpcService {
     #[allow(clippy::too_many_arguments)]
     pub fn new(
