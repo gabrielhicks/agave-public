@@ -2,7 +2,7 @@
 
 # Default variables
 SOLANA_RELEASE=${SOLANA_RELEASE:-"v2.1.13-mod"}
-GITHUB_REPO="gabrielhicks/agave"
+GITHUB_REPO="gabrielhicks/agave-public"
 INSTALL_DIR="/home/solv/.local/share/solana/install/releases/$SOLANA_RELEASE"
 ACTIVE_DIR="/home/solv/.local/share/solana/install/active_release/bin"
 
